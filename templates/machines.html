@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Machines</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="jumbotron text-center" style="height: 100vh;">
+		<div class="container">
+			<table id="table" class ="table table-hover" data-toggle="true" data-toolbar="#toolbar" data-search="true" data-show-columns="true" data-pagination="true" data-height="500">
+			<thead>
+				<tr>
+					<th data-field="id">Machine ID</th>
+					<th data-field="name">Machine Name</th>
+					<th data-field="enabled">Machine Enabled</th>
+					<th data-field="type">Machine Type</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for machine in machines %}
+					<tr>
+						<td>{{ machine.id }}</td>
+						<td>{{ machine.name }}</td>
+						<td>{{ machine.enabled }}</td>
+						<td>{{ machine.type }}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo "
+        crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 "
+        crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy "
+        crossorigin="anonymous "></script>
+</body>
+
+</html>
